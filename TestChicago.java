@@ -6,22 +6,14 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import java.io.IOException;
 import java.util.List;
 
-
 public class TestChicago {
-	
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-
         // For work in IE you must remove PROTECTED MODE from all zones !!!
          System.setProperty("webdriver.ie.driver", "C:\\selenium-2.51.0\\IEDriverServer.exe");
-           
            WebDriver driver = new InternetExplorerDriver();
-
-           
            String appUrl = "http://www.remax1stclass.com/homes-for-sale";    
-       
-           
             driver.get(appUrl);
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             List <WebElement> ElementCity = driver.findElements(By.className("cityBox"));
